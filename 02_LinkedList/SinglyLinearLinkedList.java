@@ -1,9 +1,33 @@
+//////////////////////////////////////////////////////////////////
+//
+//  Class Name       : node
+//
+//  Description      : This class represents a node of a singly
+//                     linear linked list. It contains data and
+//                     a reference to the next node.
+//
+//  Author           : Shubham Somanath Gadhe
+//  Date             : 09/08/2026
+//
+//////////////////////////////////////////////////////////////////
+
 class node
 {
     public int data;
     public node next;
 
-    // Initializes a new node with the specified data
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Constructor Name : node()
+    //
+    //  Description      : It is used to initialise a new node
+    //                     with the specified data.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 09/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     node(int iNo)
     {
         this.data = iNo;
@@ -11,19 +35,55 @@ class node
     }
 }
 
+//////////////////////////////////////////////////////////////////
+//
+//  Class Name       : SinglyLL
+//
+//  Description      : This class is used to implement a singly
+//                     linear linked list and provides operations
+//                     such as insertion, deletion, display and
+//                     counting of nodes.
+//
+//  Author           : Shubham Somanath Gadhe
+//  Date             : 09/08/2026
+//
+//////////////////////////////////////////////////////////////////
+
 class SinglyLL
 {
     private node first; 
     private int iCount;
 
-    // Initializes an empty singly linear linked list
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Constructor Name : SinglyLL()
+    //
+    //  Description      : It is used to initialise an empty
+    //                     singly linear linked list.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 09/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public SinglyLL()
     {
         this.first = null;
         this.iCount = 0;
     }
 
-    // Displays all elements of the linked list
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : Display()
+    //
+    //  Description      : It is used to display all elements of
+    //                     the singly linear linked list.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 09/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public void Display()
     {
         node temp = first;
@@ -37,13 +97,35 @@ class SinglyLL
         System.out.println("null");
     }
 
-    // Returns the total number of nodes in the linked list
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : Count()
+    //
+    //  Description      : It is used to return the total number
+    //                     of nodes present in the linked list.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 09/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public int Count()
     {
         return iCount;
     }
 
-    // Inserts a new node at the beginning of the linked list
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : InsertFirst()
+    //
+    //  Description      : It is used to insert a new node at the
+    //                     beginning of the linked list.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 09/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public void InsertFirst(int iNo)
     {
         node newn = new node(iNo);
@@ -62,7 +144,18 @@ class SinglyLL
 
     }
 
-    // Inserts a new node at the end of the linked list
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : InsertLasts()
+    //
+    //  Description      : It is used to insert a new node at the
+    //                     end of the linked list.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 09/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public void InsertLasts(int iNo)
     {
         node newn = new node(iNo);
@@ -85,7 +178,18 @@ class SinglyLL
         iCount++;
     }
 
-    // Inserts a new node at the specified position in the linked list
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : InsertAtPos()
+    //
+    //  Description      : It is used to insert a new node at the
+    //                     specified position in the linked list.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 09/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public void InsertAtPos(int iNo, int iPos)
     {
         node newn = new node(iNo);
@@ -120,7 +224,18 @@ class SinglyLL
         }
     }
 
-    // Deletes the first node from the linked list
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : DeleteFirst()
+    //
+    //  Description      : It is used to delete the first node
+    //                     from the linked list.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 09/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public void DeleteFirst()
     {
         if(first == null)
@@ -139,7 +254,18 @@ class SinglyLL
         iCount--;
     }
 
-    // Deletes the last node from the linked list
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : DeleteLast()
+    //
+    //  Description      : It is used to delete the last node
+    //                     from the linked list.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 09/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public void DeleteLast()
     {
         node temp = first;
@@ -165,7 +291,18 @@ class SinglyLL
         iCount--;        
     }
 
-    // Deletes the node at the specified position from the linked list
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : DeleteAtPos()
+    //
+    //  Description      : It is used to delete the node at the
+    //                     specified position from the linked list.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 09/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public void DeleteAtPos(int iPos)
     {
         node temp = first;
@@ -199,9 +336,35 @@ class SinglyLL
     }    
 }
 
+//////////////////////////////////////////////////////////////////
+//
+//  Class Name       : SinglyLinearLinkedList
+//
+//  Description      : This class contains the main method used
+//                     to demonstrate various operations on a
+//                     singly linear linked list.
+//
+//  Author           : Shubham Somanath Gadhe
+//  Date             : 09/08/2026
+//
+//////////////////////////////////////////////////////////////////
+
 class SinglyLinearLinkedList
 {
-    // Entry point of the application
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : main()
+    //
+    //  Description      : It is the entry point of the application.
+    //                     It demonstrates insertion, deletion,
+    //                     display and counting operations on the
+    //                     singly linear linked list.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 09/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public static void main(String A[])
     {
         int iRet = 0;
