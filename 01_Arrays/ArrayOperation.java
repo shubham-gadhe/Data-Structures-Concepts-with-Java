@@ -1,18 +1,55 @@
 import java.util.*;
 
+//////////////////////////////////////////////////////////////////
+//
+//  Class Name       : ArrayOperationX
+//
+//  Description      : This class is used to perform various
+//                     operations on an integer array such as
+//                     accepting, displaying, searching and
+//                     calculating summation, maximum, minimum
+//                     and frequency.
+//
+//  Author           : Shubham Somanath Gadhe
+//  Date             : 23/08/2026
+//
+//////////////////////////////////////////////////////////////////
+
 class ArrayOperationX
 {
     protected int iSize = 0;
     protected int Arr[];
 
-    // Initializes the array with the specified size
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Constructor Name : ArrayOperationX()
+    //
+    //  Description      : It is used to initialize the array with
+    //                     the specified size.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 23/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public ArrayOperationX(int iSize)
     {
         this.iSize = iSize;
         Arr = new int[iSize];
     }
 
-    // Accepts array elements from the user
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : Accept()
+    //
+    //  Description      : It is used to accept array elements
+    //                     from the user.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 23/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public void Accept()
     {
         Scanner sobj = new Scanner(System.in);
@@ -25,7 +62,18 @@ class ArrayOperationX
         }
     }
 
-    // Displays all elements of the array
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : Display()
+    //
+    //  Description      : It is used to display all the elements
+    //                     of the array.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 23/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public void Display()
     {
         System.out.println("Elements of array are : ");
@@ -36,7 +84,18 @@ class ArrayOperationX
         }
     }
 
-    // Calculates and returns the summation of all array elements
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : Summation()
+    //
+    //  Description      : It is used to calculate and return the
+    //                     summation of all array elements.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 23/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public int Summation()
     {
         int iSum = 0;
@@ -49,7 +108,18 @@ class ArrayOperationX
         return iSum;
     }
 
-    // Finds and returns the maximum element from the array
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : Maximum()
+    //
+    //  Description      : It is used to find and return the
+    //                     maximum element from the array.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 23/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public int Maximum()
     {
         int iMax = 0;
@@ -65,7 +135,18 @@ class ArrayOperationX
         return iMax;
     }
 
-    // Finds and returns the minimum element from the array
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : Minimum()
+    //
+    //  Description      : It is used to find and return the
+    //                     minimum element from the array.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 23/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public int Minimum()
     {
         int iMin = 0;
@@ -83,7 +164,18 @@ class ArrayOperationX
         return iMin;
     }
 
-    // Searches for the specified element in the array
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : Search()
+    //
+    //  Description      : It is used to search for the specified
+    //                     element in the array.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 23/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public boolean Search(int iNo)
     {
         for(int i = 0; i < iSize; i++)
@@ -97,7 +189,18 @@ class ArrayOperationX
         return false;
     }
 
-    // Counts and returns the frequency of the specified element
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : Frequency()
+    //
+    //  Description      : It is used to count and return the
+    //                     frequency of the specified element.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 23/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public int Frequency(int iNo)
     {
         int iCount = 0;
@@ -114,9 +217,33 @@ class ArrayOperationX
     }
 }
 
+//////////////////////////////////////////////////////////////////
+//
+//  Class Name       : ArrayOperation
+//
+//  Description      : This class contains the main method used
+//                     to execute various array operations.
+//
+//  Author           : Shubham Somanath Gadhe
+//  Date             : 23/08/2026
+//
+//////////////////////////////////////////////////////////////////
+
 class ArrayOperation
 {
-    // Entry point of the application
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : main()
+    //
+    //  Description      : It is the entry point of the application.
+    //                     It accepts the array size and performs
+    //                     various operations using ArrayOperationX.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 23/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public static void main(String A[])
     {
         Scanner sobj = new Scanner(System.in);
