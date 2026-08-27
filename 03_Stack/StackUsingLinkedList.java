@@ -1,9 +1,33 @@
+//////////////////////////////////////////////////////////////////
+//
+//  Class Name       : node
+//
+//  Description      : This class represents a node of a stack
+//                     implemented using a linked list. It contains
+//                     data and a reference to the next node.
+//
+//  Author           : Shubham Somanath Gadhe
+//  Date             : 15/08/2026
+//
+//////////////////////////////////////////////////////////////////
+
 class node
 {
     public int data;
     public node next;
 
-    // Initializes a new node with the specified data
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Constructor Name : node()
+    //
+    //  Description      : It is used to initialise a new node
+    //                     with the specified data.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 15/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     node(int iNo)
     {
         this.data = iNo;
@@ -11,19 +35,54 @@ class node
     }
 }
 
+//////////////////////////////////////////////////////////////////
+//
+//  Class Name       : Stack
+//
+//  Description      : This class is used to implement a stack
+//                     using a singly linked list. It provides
+//                     operations such as Push, Pop, Peep,
+//                     Display and Count.
+//
+//  Author           : Shubham Somanath Gadhe
+//  Date             : 15/08/2026
+//
+//////////////////////////////////////////////////////////////////
+
 class Stack
 {
     private node first;
     private int iCount;
 
-    // Initializes an empty stack
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Constructor Name : Stack()
+    //
+    //  Description      : It is used to initialise an empty stack.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 15/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     Stack()
     {
         this.first = null;
         this.iCount = 0;
     }
 
-    // Displays all elements of the stack from top to bottom
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : Display()
+    //
+    //  Description      : It is used to display all elements of
+    //                     the stack from top to bottom.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 15/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public void Display()
     {
         node temp = first;
@@ -35,13 +94,35 @@ class Stack
         }
     }
 
-    // Returns the number of elements currently present in the stack
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : Count()
+    //
+    //  Description      : It is used to return the number of
+    //                     elements currently present in the stack.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 15/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public int Count()
     {
         return iCount;
     }
 
-    // Inserts a new element at the top of the stack
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : Push()
+    //
+    //  Description      : It is used to insert a new element at
+    //                     the top of the stack.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 15/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public void Push(int iNo)
     {
         node newn = new node(iNo);
@@ -59,7 +140,18 @@ class Stack
         iCount++;
     }
 
-    // Removes an element from the top of the stack
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : Pop()
+    //
+    //  Description      : It is used to remove an element from
+    //                     the top of the stack.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 15/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public void Pop()
     {
         if(first == null)
@@ -79,7 +171,18 @@ class Stack
         iCount--;
     }
 
-    // Displays the top element of the stack without removing it
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : Peep()
+    //
+    //  Description      : It is used to display the top element
+    //                     of the stack without removing it.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 15/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public void Peep()
     {
         if(first == null)
@@ -92,8 +195,34 @@ class Stack
     }
 }
 
+//////////////////////////////////////////////////////////////////
+//
+//  Class Name       : StackUsingLinkedList
+//
+//  Description      : This class contains the main method used
+//                     to demonstrate stack operations using
+//                     a linked list.
+//
+//  Author           : Shubham Somanath Gadhe
+//  Date             : 15/08/2026
+//
+//////////////////////////////////////////////////////////////////
+
 class StackUsingLinkedList
 {
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : main()
+    //
+    //  Description      : It is the entry point of the application.
+    //                     It demonstrates Push, Pop, Peep, Display
+    //                     and Count operations on the stack.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 15/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public static void main(String A[])
     {
         int iRet = 0;
