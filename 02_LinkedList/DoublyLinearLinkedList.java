@@ -1,10 +1,34 @@
+//////////////////////////////////////////////////////////////////
+//
+//  Class Name       : node
+//
+//  Description      : This class represents a node of a doubly
+//                     linear linked list. It contains data and
+//                     references to the next and previous nodes.
+//
+//  Author           : Shubham Somanath Gadhe
+//  Date             : 09/08/2026
+//
+//////////////////////////////////////////////////////////////////
+
 class node
 {
     public int data;
     public node next;
     public node prev;
 
-    // Initializes a new node with the specified data
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Constructor Name : node()
+    //
+    //  Description      : It is used to initialise a new node
+    //                     with the specified data.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 09/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     node(int iNo) 
     {
         this.data = iNo;
@@ -13,19 +37,55 @@ class node
     }    
 }
 
+//////////////////////////////////////////////////////////////////
+//
+//  Class Name       : DoublyLL
+//
+//  Description      : This class is used to implement a doubly
+//                     linear linked list and provides operations
+//                     such as insertion, deletion, display and
+//                     counting of nodes.
+//
+//  Author           : Shubham Somanath Gadhe
+//  Date             : 09/08/2026
+//
+//////////////////////////////////////////////////////////////////
+
 class DoublyLL
 {
     private node first;
     private int iCount;
 
-    // Initializes an empty doubly linear linked list
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Constructor Name : DoublyLL()
+    //
+    //  Description      : It is used to initialise an empty
+    //                     doubly linear linked list.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 09/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public DoublyLL()
     {
         this.first = null;
         this.iCount = 0;
     }
 
-    // Displays all elements of the doubly linked list
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : Display()
+    //
+    //  Description      : It is used to display all elements of
+    //                     the doubly linked list.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 09/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public void Display()
     {
         node temp = first;
@@ -46,13 +106,35 @@ class DoublyLL
 
     }
 
-    // Returns the total number of nodes in the linked list
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : Count()
+    //
+    //  Description      : It is used to return the total number
+    //                     of nodes present in the linked list.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 09/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public int Count()
     {
         return iCount;
     }
 
-    // Inserts a new node at the beginning of the linked list
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : InsertFirst()
+    //
+    //  Description      : It is used to insert a new node at the
+    //                     beginning of the linked list.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 09/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public void InsertFirst(int iNo)
     {
         node newn = new node(iNo);
@@ -73,7 +155,18 @@ class DoublyLL
         iCount++;
     }
 
-    // Inserts a new node at the end of the linked list
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : InsertLast()
+    //
+    //  Description      : It is used to insert a new node at the
+    //                     end of the linked list.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 09/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public void InsertLast(int iNo)
     {
         node newn = new node(iNo);
@@ -97,7 +190,18 @@ class DoublyLL
         iCount++;
     }
 
-    // Inserts a new node at the specified position in the linked list
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : InsertAtPos()
+    //
+    //  Description      : It is used to insert a new node at the
+    //                     specified position in the linked list.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 09/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public void InsertAtPos(int iNo, int iPos)
     {
         node newn = new node(iNo);
@@ -135,7 +239,18 @@ class DoublyLL
         }        
     }
 
-    // Deletes the first node from the linked list
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : DeleteFirst()
+    //
+    //  Description      : It is used to delete the first node
+    //                     from the linked list.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 09/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public void DeleteFirst()
     {
         if(first == null)
@@ -155,7 +270,18 @@ class DoublyLL
         iCount--;        
     }
 
-    // Deletes the last node from the linked list
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : DeleteLast()
+    //
+    //  Description      : It is used to delete the last node
+    //                     from the linked list.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 09/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public void DeleteLast()
     {
         node temp = first;
@@ -182,7 +308,18 @@ class DoublyLL
         iCount--;         
     }
 
-    // Deletes the node at the specified position from the linked list
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : DeleteAtPos()
+    //
+    //  Description      : It is used to delete the node at the
+    //                     specified position from the linked list.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 09/08/2026
+    //
+    //////////////////////////////////////////////////////////////////
+
     public void DeleteAtPos(int iPos)
     {
         node temp = first;
@@ -217,9 +354,35 @@ class DoublyLL
     }
 }
 
+//////////////////////////////////////////////////////////////////
+//
+//  Class Name       : DoublyLinearLinkedList
+//
+//  Description      : This class contains the main method used
+//                     to demonstrate various operations on a
+//                     doubly linear linked list.
+//
+//  Author           : Shubham Somanath Gadhe
+//  Date             : 09/08/2026
+//
+//////////////////////////////////////////////////////////////////
+
 class DoublyLinearLinkedList
 {
-    // Entry point of the application
+    //////////////////////////////////////////////////////////////////
+    //
+    //  Method Name      : main()
+    //
+    //  Description      : It is the entry point of the application.
+    //                     It demonstrates insertion, deletion,
+    //                     display and counting operations on the
+    //                     doubly linear linked list.
+    //
+    //  Author           : Shubham Somanath Gadhe
+    //  Date             : 09/08/2026
+    //    
+    //////////////////////////////////////////////////////////////////
+
     public static void main(String A[])
     {
         DoublyLL dobj = new DoublyLL();
